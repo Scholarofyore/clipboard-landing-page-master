@@ -12,6 +12,14 @@
 
 
   <style>
+    html {
+      box-sizing: border-box;
+    }
+
+    * {
+      box-sizing: inherit;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -31,14 +39,26 @@
       color: hsl(201, 11%, 66%);
     }
 
-    h1, h3 {
+    h1, h2 {
       font-weight: 600;
       color: hsl(210, 10%, 33%);
+      margin-bottom: -10px;
     }
+
+    .header-content {
+      text-align: center;
+      margin: 2% 28.5% 3%;
+    }
+
+    section {
+      padding: 0 1em;
+    }
+
     /* Header Styles */
     header {
       text-align: center;
       padding: 0 1em;
+      margin-bottom: 120px;
     }
 
     .bg-image {
@@ -50,16 +70,12 @@
       margin: 0;
     }
 
-    header .sub-heading {
-      padding: 0 20%;
-    }
-
     button {
       border: 0;
       border-radius: 20px;
       padding: .8em 1.8em;
       color: white;
-      margin: 15px 10px 0;
+      margin: 15px 5px 0;
     }
 
     .ios {
@@ -70,6 +86,41 @@
       background-color: hsl(233, 100%, 69%);
     }
 
+    /* Keep Track section */
+    #keeptrack {
+      margin-bottom: 120px;
+    }
+    .keeptrack-content {
+      position: relative;
+      display: flex;
+      flex-flow: row nowrap;
+    }
+
+    .computer {
+      position: relative;
+      left: -6%;
+      margin-right: 0;
+    }
+
+    .keeptrack-sidebar {
+      padding: 7% 10% 0 2%;
+    }
+
+    .sub-subheading {
+      font-weight: 600;
+      color: hsl(210, 10%, 33%); 
+      margin-bottom: 5px;
+    }
+
+    .keeptrack-text {
+      margin-top: 8px;
+    }
+
+
+    /* Access Clipboard SEction  */
+    .image-devices {
+      margin: 0 16%;
+    }
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
@@ -83,63 +134,73 @@
       <figure class="main-icon">
         <img src="images/logo.svg" alt="logo">
       </figure>
-      <h1>A history of everything you copy</h1>
-      <p class="sub-heading">Clipboard allows you to track and organize everything you 
+      <div class="header-content">
+        <h1>A history of everything you copy</h1>
+        <p class="sub-heading">Clipboard allows you to track and organize everything you 
         copy. Instantly access your clipboard on all your devices.
-      </p>
-      <button class="button ios">Download for iOS</button>
-      <button class="button mac">Download for Mac</button>
+        </p>
+        <button class="button ios">Download for iOS</button>
+        <button class="button mac">Download for Mac</button>
+      </div>
      </header>
     
-     <section id="keep-track">
-      <h3>Keep track of your snippets</h3>
-      <p class="sub-heading">Clipboard instantly stores any item you copy in the cloud, 
+     <section id="keeptrack">
+      <div class="header-content">
+        <h2>Keep track of your snippets</h2>
+        <p class="sub-heading">Clipboard instantly stores any item you copy in the cloud, 
         meaning you can access your snippets immediately on all your 
         devices. Our Mac and iOS apps will help you organize everything.
-      </p>
+        </p>
+      </div>
       <div class="keeptrack-content">
-        <figure>
+        <figure class="computer">
           <img src="images/image-computer.png" alt="">
         </figure>
-        <div>
-          <p><span>Quick Search</span> <br>Easily search your snippets by content, category,    web  address, application, and more.
-          </p>
-          <p><span>iCloud Sync</span> <br>Instantly saves and syncs snippets across all your devices.
-          </p>
-          <p><span>Complete History</span> <br>Retrieve any snippets from the first moment you started using the app.
-          </p>
+        <div class="keeptrack-sidebar">
+          <div class="sub-heading"><p class="sub-subheading">Quick Search</p> <p class="keeptrack-text">Easily search your snippets by content, category,    web  address, application, and more.</p>
+          </div>
+          <div class="sub-heading"><p class="sub-subheading">iCloud Sync</p> <p class="keeptrack-text">Instantly saves and syncs snippets across all your devices.</p>
+          </div>
+          <div class="sub-heading"><p class="sub-subheading">Complete History</p> <p class="keeptrack-text">Retrieve any snippets from the first moment you started using the app.</p>
+          </div>
         </div>
       </div>
      </section>
      
      <section id="access-clipboard">
-      <h3>Access Clipboard anywhere</h3>
-      <p class="sub-heading">
+      <div class="header-content">
+        <h2>Access Clipboard anywhere</h2>
+        <p class="sub-heading">
         Whether you’re on the go, or at your computer, you can access all your Clipboard 
         snippets in a few simple clicks.
-      </p>
-      <figure>
+        </p>
+      </div>
+      <figure class="image-devices">
         <img src="images/image-devices.png" alt="devices">
       </figure>
      </section>
     
      <section id="supercharge">
-      <h3>Supercharge your workflow</h3>
-      <p class="sub-heading">We’ve got the tools to boost your productivity.</p>
-      <div>
-        <img src="images/" alt="">
-        <h4>Create blacklists</h4>
-        <p class="sub-heading">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+      <div class="header-content">
+        <h3>Supercharge your workflow</h3>
+        <p class="sub-heading">We’ve got the tools to boost your productivity.</p>
       </div>
-      <div>
-        <img src="images/" alt="">
-        <h4>Plain text snippets</h4>
-        <p class="sub-heading">Remove unwanted formatting from copied text for a consistent look.</p>
-      </div>
-      <div>
-        <img src="images/" alt="">
-        <h4>Sneak preview</h4>
-        <p class="sub-heading">Quick preview of all snippets on your Clipboard for easy access.</p>
+        <div>
+          <div>
+          <img src="images/" alt="">
+          <h3>Create blacklists</h3>
+          <p class="sub-heading">Ensure sensitive information never makes its way to your clipboard by excluding certain sources.</p>
+        </div>
+        <div>
+          <img src="images/" alt="">
+          <h3>Plain text snippets</h3>
+          <p class="sub-heading">Remove unwanted formatting from copied text for a consistent look.</p>
+        </div>
+        <div>
+          <img src="images/" alt="">
+          <h3>Sneak preview</h3>
+          <p class="sub-heading">Quick preview of all snippets on your Clipboard for easy access.</p>
+        </div> 
       </div>
      </section>
     
@@ -162,16 +223,18 @@
      </section>
     
      <section id="clipboard">
-      <h3>Clipboard for iOS and Mac OS</h3>
-      <p class="sub-heading">Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard.</p>
-      <button class="button ios">Download for iOS</button>
-      <button class="button mac">Download for Mac</button>
+      <div class="header-content">
+        <h3>Clipboard for iOS and Mac OS</h3>
+        <p class="sub-heading">Available for free on the App Store. Download for Mac or iOS, sync with iCloud and you’re ready to start adding to your clipboard.</p>
+        <button class="button ios">Download for iOS</button>
+        <button class="button mac">Download for Mac</button>
+      </div>
      </section>
     
      <section id="footer">
       <img src="images/logo.svg" alt="" class="logo-footer">
-      <p>FAQs <br> Contact Us</p>
-      <p>Privacy Policy <br> Press Kit</p>
+      <p>FAQs <p> Contact Us</p>
+      <p>Privacy Policy <p> Press Kit</p>
       <p>Install Guide</p>
       <div class="footer-logos">
         <img src="images/icon-facebook.svg" alt="">
